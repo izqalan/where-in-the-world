@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-  <div class="h-full lg:p-12">
+  <div class="h-full p-10 md:px-20">
     <div v-if="this.isLoading"><Loader /></div>
     <button
       @click="$router.go(-1)"
