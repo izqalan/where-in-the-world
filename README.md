@@ -1,4 +1,9 @@
-# rc-fe-assessment
+# Where in the world!
+
+https://img.shields.io/badge/Demo-screenshots-blue
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-orange)](https://where-in-the-world-tau.vercel.app/)
+[![Demo screenshots](https://img.shields.io/badge/Demo-screenshots-blue)](https://imgur.com/a/eBQvGDk)
 
 ## Project setup
 ```
@@ -19,6 +24,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
