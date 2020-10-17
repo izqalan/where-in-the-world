@@ -30,8 +30,21 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  routes,
   mode: 'history',
-  routes
+  scrollBehavior: (to, from, savedPosition) => {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
+    if (savedPosition) {
+      return savedPosition;
+    }
+    console.log(savedPosition)
+    return { x: 0, y: 0 };
+  },
+
 });
 
 Vue.config.productionTip = false

@@ -26,7 +26,6 @@ export default {
       )
       .then((response) => {
         (this.countryInfo = response.data)
-        console.log(this.countryInfo);
         this.countryCode = this.countryInfo[0].borders;
         this.countryCodeString = this.countryCode.join(";");
         // https://restcountries.eu/#api-endpoints-list-of-codes

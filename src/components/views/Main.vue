@@ -46,7 +46,6 @@ export default {
       .catch((e) => (this.error = e))
       .finally(() => {
         this.isLoading = false;
-        console.log(this.countryInfo);
       });
   },
   computed: {
