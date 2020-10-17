@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "serve -s dist"
@@ -31,7 +31,6 @@
     "postcss": "^8.1.1",
     "postcss-loader": "^4.0.4",
     "serve": "^11.3.2",
-    "tailwindcss-dark-mode": "^1.1.6",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
