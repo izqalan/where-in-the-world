@@ -83,13 +83,24 @@ module.exports = {
         full: "100%",
         screen: "100vh"
       },
+      maxHeight: {
+        "1/5-vh": "20vh",
+        "2/5-vh": "40vh",
+        "1/2-vh": "50vh",
+        "3/5-vh": "60vh",
+        "3/4-vh": "75vh",
+        "20-vh": "20vh",
+        "30-vh": "30vh",
+        "70-vh": "70vh",
+        80: "80%",
+        90: "90%",
+        full: "100%",
+        screen: "100vh"
+      },
       fontFamily: {
         body: ["Nunito Sans", "sans-serif"],
       }
     }
   },
-  variants: {},
-  plugins: [
-    require('tailwindcss-dark-mode')(),
-  ]
+  variants: {}
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="flex flex-col h-screen bg-background-secondary" :class="theme">
+  <div id="app" class="flex flex-col h-full min-h-screen bg-background-secondary" :class="theme">
     <div
       id="nav"
       class="flex flex-row items-center bg-background-primary dark:bg-darkPrimary py-6 px-12 md:px-32 shadow-lg w-full"

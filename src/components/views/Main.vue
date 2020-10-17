@@ -7,7 +7,8 @@ import Card from "../common/card";
 import Loader from "../common/loader"
 import Vue from "vue";
 import { CoolSelectPlugin, CoolSelect } from "vue-cool-select";
-import "vue-cool-select/dist/themes/bootstrap.css";
+// import "vue-cool-select/dist/themes/bootstrap.css";
+import "../../styles/dropdown.css"
 import axios from "axios";
 
 Vue.use(CoolSelectPlugin);
@@ -70,7 +71,7 @@ export default {
 </script>
 
 <template>
-  <div class="p-10 md:px-20 ">
+  <div class="p-10 md:px-20">
     <div class="flex flex-col">
       <div class="px-4 lg:px-12 flex flex-col lg:flex-row w-full lg:items-center mr-10 my-2">
         <div class="w-full ">
@@ -83,16 +84,15 @@ export default {
             <input
               type="text"
               v-model="search"
-              class="w-4/5 p-2 bg-background-primary"
+              class="w-4/5 p-2 bg-background-primary text-background-ternary"
               placeholder="Search by country"
             />
           </div>
         </div>
         <div class="lg:float-right w-3/5 md:w-1/5 py-8 lg:py-0">
-          <div class="w-full shadow rounded bg-background-primary">
+          <div class="w-full cursor-pointer shadow rounded bg-background-primary">
             <cool-select
               v-model="region"
-              :inputStyles="'bg-background-primary'"
               :items="items"
               item-value:
               placeholder="Filter by Region"
@@ -102,7 +102,7 @@ export default {
         </div>
       </div>
       <div v-if="this.isLoading"><Loader /></div>
-      <div v-if="countryInfo" class="flex flex-wrap w-full h-screen lg:h-70-vh nobar lg:overflow-y-scroll">
+      <div v-if="countryInfo" class="flex flex-wrap lg:h-70-vh nobar lg:overflow-y-scroll">
         <div
           v-for="country in filteredCountries"
           v-bind:key="country.id"
