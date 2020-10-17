@@ -2,9 +2,9 @@
   <div id="app" class="flex flex-col h-full min-h-screen bg-background-secondary" :class="theme">
     <div
       id="nav"
-      class="flex flex-row items-center bg-background-primary dark:bg-darkPrimary py-6 px-12 md:px-32 shadow-lg w-full"
+      class="flex flex-row items-center bg-background-primary dark:bg-darkPrimary py-6 px-8 md:px-32 shadow-lg w-full"
     >
-      <div class="text-background-ternary font-bold text-sm md:text-2xl w-full">
+      <div class="text-background-ternary font-bold text-md md:text-2xl w-full">
         <router-link :to="{ name: 'homepage' }"
           >Where in the world?</router-link
         >
