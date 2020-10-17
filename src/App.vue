@@ -1,5 +1,9 @@
 <template>
-  <div id="app" class="flex flex-col h-full min-h-screen bg-background-secondary" :class="theme">
+  <div
+    id="app"
+    class="flex flex-col h-full min-h-screen bg-background-secondary"
+    :class="theme"
+  >
     <div
       id="nav"
       class="flex flex-row items-center bg-background-primary dark:bg-darkPrimary py-6 px-8 md:px-32 shadow-lg w-full"
@@ -10,12 +14,13 @@
         >
       </div>
 
-      <div
-        class="w-full mr-3"
-      >
-        <div class="mr-2 text-background-ternary">
-          <div @click.prevent="toggleTheme" class="cursor-pointer font-semibold float-right">
-            <font-awesome-icon :icon="icon" /> {{mode}}
+      <div class="w-full mr-3 ">
+        <div class="mr-2 text-background-ternary theme-change">
+          <div
+            @click.prevent="toggleTheme"
+            class="cursor-pointer font-semibold float-right"
+          >
+            <font-awesome-icon :icon="icon" /> {{ mode }}
           </div>
         </div>
       </div>
@@ -36,25 +41,31 @@ export default {
   name: "App",
   data() {
     return {
-      theme: 'theme-light',
-      icon: 'moon',
-      mode: 'Dark Mode'
-    }
+      theme: "theme-light",
+      icon: "moon",
+      mode: "Dark Mode",
+    };
   },
   watch: {
     $route: {
       handler: (to) => {
-        document.title = to.meta && to.meta.title  || '';
+        document.title = (to.meta && to.meta.title) || "";
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     toggleTheme() {
-      this.theme = this.theme =='theme-light' ? 'theme-dark' : 'theme-light';
-      this.icon = this.icon == 'moon' ? 'cloud-sun' : 'moon';
-      this.mode = this.theme == 'theme-light' ? 'Dark Mode' : 'Light Mode'; 
-    }
-  }
+      this.theme = this.theme == "theme-light" ? "theme-dark" : "theme-light";
+      this.icon = this.icon == "moon" ? "cloud-sun" : "moon";
+      this.mode = this.theme == "theme-light" ? "Dark Mode" : "Light Mode";
+    },
+  },
 };
 </script>
+
+<style scoped>
+.theme-change {
+  transition: 0.2s ease-in-out;
+}
+</style>

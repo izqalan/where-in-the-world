@@ -111,7 +111,7 @@ export default {
           <router-link
             :to="{ name: 'countryDetail', params: { country: country.name } }"
           >
-            <transition name="fade">
+            <transition>
               <Card
                 v-bind:img="country.flag"
                 v-bind:country="country.name"
@@ -128,15 +128,6 @@ export default {
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transform: opacity 1.5s ease-out;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
 
 .nobar::-webkit-scrollbar {
     display: none;

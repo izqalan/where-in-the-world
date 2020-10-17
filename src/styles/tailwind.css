@@ -7,10 +7,12 @@
 .theme-light {
   --bg-background-primary: #FFFFFF;
   --bg-background-secondary: #FAFAFA;
-  --bg-background-ternary: #131516
+  --bg-background-ternary: #131516;
+  transition: background-color 0.15s ease-in-out;
 }
 .theme-dark {
   --bg-background-primary: #2B3743;
   --bg-background-secondary: #212E37;
-  --bg-background-ternary: #FAFAFA
+  --bg-background-ternary: #FAFAFA;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

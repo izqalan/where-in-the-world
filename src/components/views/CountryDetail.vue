@@ -66,7 +66,7 @@ export default {
     </button>
     <!-- warning: country stored in array, access [0] or do for loop -->
     <div
-      class="flex flex-col lg:flex-row"
+      class="flex flex-col lg:flex-row enter"
       v-for="country in countryInfo"
       v-bind:key="country.id"
     >
@@ -159,3 +159,8 @@ export default {
     </div>
   </div>
 </template>
+<style scoped>
+.enter {
+  transition: 1.5s ease-in-out;
+}
+</style>
