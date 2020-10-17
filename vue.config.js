@@ -5,6 +5,8 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './src/**/*.html',
     './src/**/*.vue',
+    './src/*.vue',
+    './src/components/**/*.vue',
   ],
 
   // This is the function used to extract class names from your templates
@@ -26,10 +28,7 @@ module.exports = {
       postcss: {
         plugins: [
           tailwindcss('./tailwind.config.js'),
-          require('autoprefixer'),
-          ...process.env.NODE_ENV === 'production'
-            ? [purgecss]
-            : []
+          require('autoprefixer')
         ]
       }
     },
