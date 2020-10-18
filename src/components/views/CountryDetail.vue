@@ -72,7 +72,7 @@ export default {
       <img
         v-bind:src="country.flag"
         alt="flag"
-        class="px-8 h-1/2 lg:w-1/2"
+        class="px-8 max-h-1/2-vh lg:w-1/2"
       />
       <div class="p-8 flex flex-col lg:w-1/2">
         <div class="text-background-ternary text-3xl font-bold py-2 pb-4">{{ country.name }}</div>
